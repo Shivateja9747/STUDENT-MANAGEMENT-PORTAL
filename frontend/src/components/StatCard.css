@@ -1,0 +1,30 @@
+.stat-card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(213, 212, 227, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stat-card-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+  margin-bottom: 0.5rem;
+}
+
+.stat-card-value {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--ink-main);
+  letter-spacing: -0.02em;
+}
+
+.stat-card-sub {
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  margin-top: 0.25rem;
+}

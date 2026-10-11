@@ -1,0 +1,48 @@
+:root {
+  /* Color Palette */
+  --primary-indigo: #4338CA;
+  --primary-hover: #3730A3;
+  --primary-light: #EEF2FF;
+
+  --sidebar-indigo: #312E81;
+  --sidebar-active: #4338CA;
+  --sidebar-hover: rgba(255, 255, 255, 0.08);
+
+  --bg-app: #F4F5FB;
+  --bg-card: #FFFFFF;
+  --bg-input: #FFFFFF;
+  --bg-subtle: #F9FAFB;
+
+  --ink-main: #1E1B3A;
+  --ink-muted: #5B5876;
+  --border-color: #D5D4E3;
+  --border-focus: #4338CA;
+
+  /* Status Colors */
+  --color-success: #15803D;
+  --bg-success: #DCFCE7;
+
+  --color-warning: #D97706;
+  --bg-warning: #FEF3C7;
+
+  --color-danger: #B42318;
+  --bg-danger: #FEE2E2;
+
+  /* Typography */
+  --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* Sizes & Geometry */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  --input-height: 48px;
+  --button-height: 46px;
+
+  /* Elevation */
+  --shadow-card: 0 1px 3px rgba(30, 27, 58, 0.08), 0 4px 12px rgba(30, 27, 58, 0.03);
+  --shadow-dropdown: 0 10px 25px -5px rgba(30, 27, 58, 0.15);
+
+  --sidebar-width: 240px;
+}

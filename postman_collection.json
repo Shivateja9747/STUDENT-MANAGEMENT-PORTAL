@@ -1,0 +1,133 @@
+{
+  "info": {
+    "name": "EduTrack API Collection",
+    "description": "Complete Postman Collection for EduTrack Spring Boot 3 + JWT + JPA Backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"admin123\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/api/auth/login", "host": ["{{baseUrl}}"], "path": ["api", "auth", "login"] }
+          }
+        },
+        {
+          "name": "Change Password",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{jwtToken}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"currentPassword\": \"admin123\",\n  \"newPassword\": \"admin@NewPass123\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/api/auth/change-password", "host": ["{{baseUrl}}"], "path": ["api", "auth", "change-password"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Student Endpoints",
+      "item": [
+        {
+          "name": "Get Student Performance Summary",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{jwtToken}}" }],
+            "url": { "raw": "{{baseUrl}}/api/student/performance", "host": ["{{baseUrl}}"], "path": ["api", "student", "performance"] }
+          }
+        },
+        {
+          "name": "Get Student Attendance Details",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{jwtToken}}" }],
+            "url": { "raw": "{{baseUrl}}/api/student/attendance", "host": ["{{baseUrl}}"], "path": ["api", "student", "attendance"] }
+          }
+        },
+        {
+          "name": "Get Published Student Marks",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{jwtToken}}" }],
+            "url": { "raw": "{{baseUrl}}/api/student/marks", "host": ["{{baseUrl}}"], "path": ["api", "student", "marks"] }
+          }
+        },
+        {
+          "name": "QR Check-in",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{jwtToken}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"token\": \"sample_signed_qr_jwt_token\",\n  \"latitude\": 17.38504,\n  \"longitude\": 78.48667\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/api/student/checkin", "host": ["{{baseUrl}}"], "path": ["api", "student", "checkin"] }
+          }
+        },
+        {
+          "name": "Get At-Risk Score Self View",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{jwtToken}}" }],
+            "url": { "raw": "{{baseUrl}}/api/student/at-risk", "host": ["{{baseUrl}}"], "path": ["api", "student", "at-risk"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Faculty & HOD Endpoints",
+      "item": [
+        {
+          "name": "Start QR Session",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{jwtToken}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"subjectId\": 1,\n  \"period\": 1,\n  \"geofenceEnabled\": true,\n  \"centerLat\": 17.38504,\n  \"centerLng\": 78.48667,\n  \"radiusMeters\": 100.0\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/api/teacher/qr-session/start", "host": ["{{baseUrl}}"], "path": ["api", "teacher", "qr-session", "start"] }
+          }
+        },
+        {
+          "name": "Get HOD Department Students",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{jwtToken}}" }],
+            "url": { "raw": "{{baseUrl}}/api/hod/students?page=0&size=10&section=A", "host": ["{{baseUrl}}"], "path": ["api", "hod", "students"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Public Parent Portal",
+      "item": [
+        {
+          "name": "Get Parent Portal Summary",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/public/parent-portal/SAMPLE_PARENT_TOKEN", "host": ["{{baseUrl}}"], "path": ["api", "public", "parent-portal", "SAMPLE_PARENT_TOKEN"] }
+          }
+        }
+      ]
+    }
+  ]
+}

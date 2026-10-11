@@ -1,0 +1,167 @@
+.parent-portal-container {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+.portal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2rem;
+  background-color: var(--color-card-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.portal-header .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.expiry-notice {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  background-color: var(--color-bg);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+.portal-content {
+  max-width: 1000px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.student-profile-card {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.student-main-info h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.info-tags {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.overall-att-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(59, 130, 246, 0.1);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.att-pct {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #3B82F6;
+}
+
+.att-label {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.portal-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.attendance-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.subject-att-card {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.card-stats .pct.good { color: #10B981; font-weight: 700; }
+.card-stats .pct.low { color: #EF4444; font-weight: 700; }
+
+.portal-marks-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  font-size: 0.9rem;
+}
+
+.portal-marks-table th, .portal-marks-table td {
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+}
+
+.portal-marks-table th {
+  background-color: var(--color-bg);
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.grade-badge {
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  background-color: rgba(59, 130, 246, 0.15);
+  color: #3B82F6;
+  border-radius: var(--radius-sm);
+}
+
+.portal-loading, .portal-error-card {
+  margin: 5rem auto;
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius-xl);
+  max-width: 500px;
+}
+
+.portal-error-card .error-icon {
+  color: #EF4444;
+  margin-bottom: 1rem;
+}

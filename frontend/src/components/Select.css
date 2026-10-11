@@ -1,0 +1,36 @@
+.select-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+  width: 100%;
+}
+
+.select-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ink-main);
+  margin-bottom: 0.35rem;
+}
+
+.select-field {
+  width: 100%;
+  height: var(--input-height);
+  padding: 0 1rem;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--ink-main);
+  font-size: 0.95rem;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.select-field:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.1);
+}
+
+.select-field.select-error {
+  border-color: var(--color-danger);
+}
